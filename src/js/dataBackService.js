@@ -132,3 +132,20 @@ export async function deleteUserGroups(authToken, queryString) {
     const header = { "Content-Type": "application/json", "Authorization": "Bearer " + authToken };
     return deleteRequestHeader(dataBackUrl + queryString, header);
 }
+
+// ======================================================= PRATOS ======================================================
+export async function getPratos() {
+    const dataBackUrl = global.urlPratos();
+    const clientUrlExtension = "/pratos";
+    return getRequestHeader(dataBackUrl + clientUrlExtension);
+}
+
+export async function addPrato(parameters) {
+    // os parametros já são o body completamente montado
+    const dataBackUrl = global.urlPratos() ;
+    const clientUrlExtension = "/cadastro";
+    const body = parameters
+    const header = {"Content-Type": "application/json"};
+    console.log(body)
+    return postRequestHeader(dataBackUrl + clientUrlExtension, header, body, true);
+}
