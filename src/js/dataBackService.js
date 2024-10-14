@@ -140,6 +140,12 @@ export async function getPratos() {
     return getRequestHeader(dataBackUrl + clientUrlExtension);
 }
 
+export async function getPratosSemanais() {
+    const dataBackUrl = global.urlPratos();
+    const clientUrlExtension = "/pratos/semanais";
+    return getRequestHeader(dataBackUrl + clientUrlExtension);
+}
+
 export async function addPrato(parameters) {
     // os parametros já são o body completamente montado
     const dataBackUrl = global.urlPratos() ;
@@ -148,4 +154,13 @@ export async function addPrato(parameters) {
     const header = {"Content-Type": "application/json"};
     console.log(body)
     return postRequestHeader(dataBackUrl + clientUrlExtension, header, body, true);
+}
+
+export async function editOrDeletePrato(queryString, parameters) {
+    // os parametros já são o body completamente montado
+    const dataBackUrl = global.urlPratos() + "/pratos/";
+    const body = parameters
+    const clientUrlExtension = dataBackUrl + queryString;
+    const header = { "Content-Type": "application/json" };
+    return postRequestHeader(clientUrlExtension, header, body, true);
 }
