@@ -255,8 +255,6 @@ document.getElementById('pratoForm').addEventListener('submit', async (event) =>
     }
 });
 
-
-// Chama as funções quando a página carregar
 window.onload = () => {
     getPratos(); // Chama a função que busca todos os pratos
     getPratosSemanais(); // Chama a função que busca apenas os pratos semanais
