@@ -1313,3 +1313,10 @@ input:checked+#track {
   background-color: #60a5fa; /* bg-blue-400 ao passar o mouse */
   color: white;
 }
+
+.fixed-size-image {
+  width: 160px; /* Define a largura fixa */
+  height: 160px; /* Define a altura fixa */
+  object-fit: cover; /* Garante que a imagem se ajuste e preencha o contêiner sem distorcer */
+  border-radius: 8px; /* Mantém as bordas arredondadas */
+}
