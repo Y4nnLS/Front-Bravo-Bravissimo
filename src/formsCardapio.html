@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Cardápio</title>
+    <link href="./css/output.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeicons/4.1.0/primeicons.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-100 py-10">
+    <div class="max-w-3xl mx-auto bg-white p-8 shadow-lg rounded-lg">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Cardápio</h1>
+        <!-- Div para exibir o resultado -->
+        <div id="resultado" class="mb-6"></div>
+
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Cardápio Semanal</h1>
+        <!-- Div para exibir o resultado -->
+        <div id="pratosSemanais" class="mb-6"></div>
+
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Adicionar Prato</h1>
+
+        <!-- Formulário para enviar um novo prato -->
+        <form id="pratoForm" class="space-y-6">
+            <div>
+                <label for="nome" class="block text-gray-700 font-semibold">Nome:</label>
+                <input type="text" id="nome" name="nome" required
+                    class="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="descricao" class="block text-gray-700 font-semibold">Descrição:</label>
+                <textarea id="descricao" name="descricao" required
+                    class="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+
+            <div>
+                <label for="ingredientes" class="block text-gray-700 font-semibold">Ingredientes:</label>
+                <textarea id="ingredientes" name="ingredientes" required
+                    class="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+
+            <div>
+                <label for="preco" class="block text-gray-700 font-semibold">Preço:</label>
+                <input type="number" id="preco" name="preco" required
+                    class="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="restaurante" class="block text-gray-700 font-semibold">Restaurante:</label>
+                <input type="text" id="restaurante" name="restaurante" required
+                    class="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="semanal" class="block text-gray-700 font-semibold">Semanal:</label>
+                <div class="flex items-center mt-2">
+                    <!-- Switch button -->
+                    <label class="relative cursor-pointer">
+                        <!-- Checkbox oculto -->
+                        <input type="checkbox" id="semanal" name="semanal" class="sr-only">
+                        <!-- Track (barra) -->
+                        <div id="track">
+                            <!-- Dot (a bolinha) -->
+                            <div class="dot"></div>
+                        </div>
+                    </label>
+                    <span id="switchText" class="ml-3 text-gray-700">Não</span>
+                </div>
+            </div>
+
+            <div>
+                <label for="foto" class="block text-gray-700 font-semibold">Foto:</label>
+                <input type="file" id="foto" name="foto" accept="image/*"
+                    class="mt-1 block w-full text-gray-700 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <button type="submit"
+                    class="w-full bg-blue-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Adicionar Prato
+                </button>
+            </div>
+        </form>
+
+        <!-- Div para exibir o resultado -->
+        <div id="resultadoPrato" class="mt-6"></div>
+    </div>
+    <script type="module" src="./js/requests.js"></script>
+    <script>
+        // Alterna o texto "Sim" ou "Não" com base no estado do checkbox
+        document.getElementById('semanal').addEventListener('change', function () {
+            const switchText = document.getElementById('switchText');
+            if (this.checked) {
+                switchText.textContent = 'Sim';
+            } else {
+                switchText.textContent = 'Não';
+            }
+        });
+    </script>
+</body>
+
+</html>
