@@ -22,7 +22,7 @@ async function getPratos() {
             pratos.forEach((prato) => {
                 let foto = prato.foto
                     ? `<img class="fixed-size-image object-cover mx-auto" src="data:image/png;base64,${prato.foto}" alt="Imagem do Prato"/>`
-                    : "Sem imagem";
+                    : `<div class="fixed-size-image object-cover mx-auto">Sem imagem</div>`;
                 html += `<div class="max-w-md2 mx-auto bg-white p-8 shadow-md rounded-lg">
                             ${foto}        
                                 <div class="p-4">
@@ -77,7 +77,7 @@ async function getPratosSemanais() {
             pratos.forEach((prato) => {
                 let foto = prato.foto
                     ? `<img class="fixed-size-image object-cover mx-auto" src="data:image/png;base64,${prato.foto}" alt="Imagem do Prato"/>`
-                    : "Sem imagem";
+                    : `<div style="width:160px;height:160x">Sem imagem</div>`;
                 html += `<div class="max-w-md2 mx-auto bg-white p-8 shadow-md rounded-lg">
                             ${foto}        
                                 <div class="p-4">
