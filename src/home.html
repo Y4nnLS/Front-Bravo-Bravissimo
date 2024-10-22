@@ -9,17 +9,8 @@
 </head>
 <body>
     <!-- Navbar -->
-    <header>
-        <div>LOGO</div>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="historia.html">História</a></li>
-                <li><a href="cardapio.html">Cardápio</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div> <!-- Local onde o header será inserido -->
+
     <!-- Hero Section -->
     <section class="whatsapp-popup" onclick="openWhatsApp()">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
@@ -47,7 +38,7 @@
             </div>
             <div class="arrow-right">▶</div>
         </div>
-        <a class="botoes" href="#">Ver Cardapio</a>
+        <a class="botoes" href="cardapio.html">Ver Cardapio</a>
     </section>
 
     <!-- História Section -->
@@ -57,7 +48,7 @@
             <div class="texto-historia">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quasi expedita dicta perferendis veniam nisi natus impedit vero exercitationem, aspernatur, earum nulla obcaecati quae, possimus voluptas autem tenetur adipisci ex.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque fugit consectetur quam a exercitationem unde quos distinctio praesentium, quas sed nihil doloremque aspernatur ducimus corporis maxime itaque! Nostrum, accusamus.</p>
-                <a class="botoes" href="#">Ver história</a>
+                <a class="botoes" href="historia.html">Ver história</a>
             </div>
             <div class="imagem-historia">IMG</div>
         </div>
@@ -67,6 +58,8 @@
         <p>© 2024 Bravo Bravíssimo. Todos os direitos reservados.</p>
     </footer>
     <script type="module" src="./js/whats.js"></script>
+    <script type="module" src="./js/header.js"></script>
+
 
 </body>
 </html>
