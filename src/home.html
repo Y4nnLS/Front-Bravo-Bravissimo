@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bravo Bravíssimo</title>
     <link rel="stylesheet" href="..\src\css\home.css">
+    <link rel="stylesheet" href="..\src\css\output.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -12,20 +13,16 @@
         <div>LOGO</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">História</a></li>
-                <li><a href="#">Cardápio</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
-
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Bravo Bravíssimo</h1>
-        <div class="whatsapp-link">
-            <a href="#">Link para whatsapp</a>
-        </div>
+    <section class="whatsapp-popup" onclick="openWhatsApp()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
     </section>
 
     <!-- Pratos Section -->
@@ -69,5 +66,7 @@
     <footer>
         <p>© 2024 Bravo Bravíssimo. Todos os direitos reservados.</p>
     </footer>
+    <script type="module" src="./js/whats.js"></script>
+
 </body>
 </html>
