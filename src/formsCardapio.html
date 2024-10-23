@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Cardápio</title>
     <link href="./css/output.css" rel="stylesheet">
-    <link href="./css/home.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/primeicons/4.1.0/primeicons.min.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-gray-100 py-10">
-    <div id="header-placeholder"></div> <!-- Local onde o header será inserido -->
-
-    <!-- Pop-up do WhatsApp -->
-<div class="whatsapp-popup" onclick="openWhatsApp()">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
-</div>
-
     <div class="max-w-3xl mx-auto bg-white p-8 shadow-lg rounded-lg">
         <h1 class="text-3xl font-bold text-gray-800 mb-6">Cardápio</h1>
         <!-- Div para exibir o resultado -->
@@ -56,15 +49,10 @@
 
             <div>
                 <label for="restaurante" class="block text-gray-700 font-semibold">Restaurante:</label>
-                <select id="restaurante" name="restaurante" required
+                <input type="text" id="restaurante" name="restaurante" required
                     class="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                    <option value="" disabled selected>Selecione o restaurante</option>
-                    <option value="Bravo">Bravo</option>
-                    <option value="Bravissimo">Bravíssimo</option>
-                </select>
             </div>
-            
-            <!-- linha comentada apenas para demonstração de como dar o commit corretamente -->
+
             <div>
                 <label for="semanal" class="block text-gray-700 font-semibold">Semanal:</label>
                 <div class="flex items-center mt-2">
@@ -99,10 +87,7 @@
         <!-- Div para exibir o resultado -->
         <div id="resultadoPrato" class="mt-6"></div>
     </div>
-    <script type="module" src="./js/header.js"></script>
-    <script type="module" src="./js/whats.js"></script>
     <script type="module" src="./js/requests.js"></script>
-
     <script>
         // Alterna o texto "Sim" ou "Não" com base no estado do checkbox
         document.getElementById('semanal').addEventListener('change', function () {
