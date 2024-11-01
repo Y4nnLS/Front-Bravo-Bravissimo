@@ -1,11 +1,12 @@
 import * as dataBackService from "./dataBackService.js";
 
 // Chama as funções quando a página carregar
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     getPratos(); // Chama a função que busca todos os pratos
     getPratosSemanais(); // Chama a função que busca apenas os pratos semanais
     getPratosPorCategoria();
 });
+
 
 // Função para buscar e exibir pratos
 async function getPratos() {
@@ -23,7 +24,7 @@ async function getPratos() {
             pratos.forEach((prato) => {
                 let foto = prato.foto
                     ? `<img class="fixed-size-image object-cover mx-auto" src="data:image/png;base64,${prato.foto}" alt="Imagem do Prato"/>`
-                    : `<div class="fixed-size-image object-cover mx-auto">Sem imagem</div>`;
+                    : "Sem imagem";
                 html += `<div class="max-w-md2 mx-auto bg-white p-8 shadow-md rounded-lg">
                             ${foto}        
                                 <div class="p-4">
@@ -78,7 +79,7 @@ async function getPratosSemanais() {
             pratos.forEach((prato) => {
                 let foto = prato.foto
                     ? `<img class="fixed-size-image object-cover mx-auto" src="data:image/png;base64,${prato.foto}" alt="Imagem do Prato"/>`
-                    : `<div style="width:160px;height:160x">Sem imagem</div>`;
+                    : "Sem imagem";
                 html += `<div class="max-w-md2 mx-auto bg-white p-8 shadow-md rounded-lg">
                             ${foto}        
                                 <div class="p-4">
