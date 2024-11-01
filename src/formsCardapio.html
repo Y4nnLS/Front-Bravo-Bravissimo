@@ -35,12 +35,29 @@
                 <input type="text" id="nome" name="nome" required
                     class="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
-
             <div>
+                <label for="categoria" class="block text-gray-700 font-semibold">Categoria:</label>
+                <select id="categoria" name="categoria" required
+                    class="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="" disabled selected>Selecione a categoria</option>
+                    <option value="saladas">Saladas</option>
+                    <option value="dia-a-dia">Dia-a-dia</option>
+                    <option value="primes">Primes</option>
+                    <option value="adicionais">Adicionais</option>
+                    <option value="bebidas">Bebidas</option>
+                    <option value="sobremesas">Sobremesas</option>
+                    <option value="starters">Starters</option>
+                    <option value="taqueria">Taqueria</option>
+                    <option value="porcoes">Porções</option>
+                    <option value="extras">Extras</option>
+                </select>
+            </div>
+            
+            <!-- <div>
                 <label for="descricao" class="block text-gray-700 font-semibold">Descrição:</label>
                 <textarea id="descricao" name="descricao" required
                     class="mt-1 w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
-            </div>
+            </div> -->
 
             <div>
                 <label for="ingredientes" class="block text-gray-700 font-semibold">Ingredientes:</label>
