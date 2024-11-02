@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "build:css": "tailwindcss build src/css/input.css -o dist/output.css"
   },
   "keywords": [],
@@ -14,6 +17,7 @@
     "postcss": "^8.4.47"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.10"
   }
 }
