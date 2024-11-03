@@ -1,65 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bravo Bravíssimo</title>
-    <link rel="stylesheet" href="..\src\css\home.css">
-    <link rel="stylesheet" href="..\src\css\output.css">
-</head>
-<body>
+    <link rel="stylesheet" href="..\src\css\home.css" />
+    <link rel="stylesheet" href="..\src\css\input.css" />
+    <link rel="stylesheet" href="..\src\css\output.css" />
+  </head>
+  <body>
     <!-- Navbar -->
-    <div id="header-placeholder"></div> <!-- Local onde o header será inserido -->
+    <div id="header-placeholder"></div>
+    <!-- Local onde o header será inserido -->
 
     <!-- Hero Section -->
     <section class="whatsapp-popup" onclick="openWhatsApp()">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+      <img src="./assets/whatsapp_icon.svg" alt="WhatsApp" />
     </section>
 
     <!-- Pratos Section -->
     <section class="pratos">
-        <h2>Descubra nossos pratos</h2>
-        <p>Pratos especiais toda semana!</p>
-        <div class="carousel">
-            <div class="arrow-left">◀</div>
-            <div class="pratos-container">
-                <div class="prato">
-                    <div class="prato-img">Img</div>
-                    <p>Prato 1</p>
-                </div>
-                <div class="prato">
-                    <div class="prato-img">Img</div>
-                    <p>Prato 2</p>
-                </div>
-                <div class="prato">
-                    <div class="prato-img">img</div>
-                    <p>Prato 3</p>
-                </div>
-            </div>
-            <div class="arrow-right">▶</div>
+      <h2>Descubra nossos pratos</h2>
+      <p>Pratos especiais toda semana!</p>
+      <div class="carousel">
+        <div class="arrow-left">◀</div>
+        <div class="pratos-container">
+          <div class="prato">
+            <div class="prato-img">Img</div>
+            <p>Prato 1</p>
+          </div>
+          <div class="prato">
+            <div class="prato-img">Img</div>
+            <p>Prato 2</p>
+          </div>
+          <div class="prato">
+            <div class="prato-img">img</div>
+            <p>Prato 3</p>
+          </div>
         </div>
-        <a class="botoes" href="cardapio.html">Ver Cardapio</a>
+        <div class="arrow-right">▶</div>
+      </div>
+      <a class="botoes" href="cardapio.html">Ver Cardapio</a>
     </section>
 
     <!-- História Section -->
     <section class="historia">
-        <h2>Descubra a nossa história</h2>
-        <div class="historia-content">
-            <div class="texto-historia">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quasi expedita dicta perferendis veniam nisi natus impedit vero exercitationem, aspernatur, earum nulla obcaecati quae, possimus voluptas autem tenetur adipisci ex.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque fugit consectetur quam a exercitationem unde quos distinctio praesentium, quas sed nihil doloremque aspernatur ducimus corporis maxime itaque! Nostrum, accusamus.</p>
-                <a class="botoes" href="historia.html">Ver história</a>
-            </div>
-            <div class="imagem-historia">IMG</div>
+      <h2>Descubra a nossa história</h2>
+      <div class="historia-content">
+        <div class="texto-historia">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
+            quasi expedita dicta perferendis veniam nisi natus impedit vero
+            exercitationem, aspernatur, earum nulla obcaecati quae, possimus
+            voluptas autem tenetur adipisci ex.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque
+            fugit consectetur quam a exercitationem unde quos distinctio
+            praesentium, quas sed nihil doloremque aspernatur ducimus corporis
+            maxime itaque! Nostrum, accusamus.
+          </p>
+          <a class="botoes" href="historia.html">Ver história</a>
         </div>
+        <div class="imagem-historia">IMG</div>
+      </div>
     </section>
 
     <footer>
-        <p>© 2024 Bravo Bravíssimo. Todos os direitos reservados.</p>
+      <p>© 2024 Bravo Bravíssimo. Todos os direitos reservados.</p>
     </footer>
     <script type="module" src="./js/whats.js"></script>
     <script type="module" src="./js/header.js"></script>
-
-
-</body>
+  </body>
 </html>
