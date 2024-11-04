@@ -1,97 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cardápio</title>
-    <link href="./css/output.css" rel="stylesheet">
-    <link href="./css/home.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeicons/4.1.0/primeicons.min.css" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet" />
+    <link href="./css/home.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeicons/4.1.0/primeicons.min.css"
+      rel="stylesheet"
+    />
+    <script type="module" src="main.js"></script>
 
     <style>
-        /* Ajustes de layout para os cards */
-        .card {
-            background-color: white;
-            margin: 10px;
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: center;
-        }
+      /* Ajustes de layout para os cards */
+      .card {
+        background-color: white;
+        margin: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+      }
 
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(
+          1,
+          1fr
+        ); /* 1 coluna por padrão (em telas pequenas) */
+        gap: 20px;
+      }
+
+      @media (min-width: 640px) {
         .grid-container {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr); /* 1 coluna por padrão (em telas pequenas) */
-            gap: 20px;
+          grid-template-columns: repeat(
+            3,
+            1fr
+          ); /* 2 colunas para telas médias */
         }
+      }
 
-        @media (min-width: 640px) {
-            .grid-container {
-                grid-template-columns: repeat(3, 1fr); /* 2 colunas para telas médias */
-            }
+      @media (min-width: 1024px) {
+        .grid-container {
+          grid-template-columns: repeat(
+            5,
+            1fr
+          ); /* 4 colunas para telas maiores */
         }
+      }
 
-        @media (min-width: 1024px) {
-            .grid-container {
-                grid-template-columns: repeat(5, 1fr); /* 4 colunas para telas maiores */
-            }
-        }
+      .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
 
-        .card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
+      .card h2 {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
 
-        .card h2 {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .card p {
-            margin: 5px 0;
-        }
-        .section-title {
-            text-align: center;
-            width: 100%;
-            margin-bottom: 20px;
-            font-size: 2rem;
-            font-weight: 700;
-        }
+      .card p {
+        margin: 5px 0;
+      }
+      .section-title {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-weight: 700;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar -->
-    <div id="header-placeholder"></div> <!-- Local onde o header será inserido -->
+    <div id="header-placeholder"></div>
+    <!-- Local onde o header será inserido -->
 
     <main class="p-8">
-        <section class="whatsapp-popup" onclick="openWhatsApp()">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
-        </section>
-        <h1 class="section-title">Cardápio</h1>
-        <!-- Pratos da Semana -->
-        <section>
-            <h2 class="section-title">Pratos da Semana</h2>
-            <div id="pratosSemanais" class="grid-container"></div>
-        </section>
+      <section class="whatsapp-popup" onclick="openWhatsApp()">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
+          alt="WhatsApp"
+        />
+      </section>
+      <h1 class="section-title">Cardápio</h1>
+      <!-- Pratos da Semana -->
+      <section>
+        <h2 class="section-title">Pratos da Semana</h2>
+        <div id="pratosSemanais" class="grid-container"></div>
+      </section>
 
-        <div id="resultados"></div>
-        <!-- Pratos Tradicionais -->
-        <!-- <section class="mt-8">
+      <div id="resultados"></div>
+      <!-- Pratos Tradicionais -->
+      <!-- <section class="mt-8">
             <h2 class="section-title">Pratos Tradicionais</h2>
             <div id="resultado" class="grid-container"></div> 
         </section> -->
     </main>
 
     <footer>
-        <p>© 2024 Bravo Bravíssimo. Todos os direitos reservados.</p>
+      <p>© 2024 Bravo Bravíssimo. Todos os direitos reservados.</p>
     </footer>
 
     <!-- Scripts -->
     <script type="module" src="./js/header.js"></script>
     <script type="module" src="./js/requestsCardapio.js"></script>
     <script type="module" src="./js/whats.js"></script>
-</body>
+  </body>
 </html>
