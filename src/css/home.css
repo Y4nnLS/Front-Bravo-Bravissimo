@@ -11,18 +11,13 @@ body {
 }
 
 /* Cabeçalho */
-header {
+/* header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #f4f4f4;
-}
-
-header .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
+} */
 
 nav ul {
   list-style: none;
@@ -73,21 +68,21 @@ nav ul li a {
   background-color: #f1f1f1;
 }
 
-.pratos h2 {
+/* .pratos h2 {
   font-size: 32px;
   margin-bottom: 10px;
 }
 
 .pratos p {
   margin-bottom: 40px;
-}
+} */
 
 .carousel {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 20px;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
 }
 
 .arrow-left,
@@ -99,23 +94,40 @@ nav ul li a {
 
 .pratos-container {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   overflow: hidden;
-  max-width: 800px;
+  max-width: 920px;
 }
 
 .prato {
   min-width: 250px;
+  min-height: 250px;
   text-align: center;
   transition: transform 0.5s ease-in-out;
+  position: relative;
+  background-image: url("../assets/placeholder.png");
+  background-size: cover;
 }
 
-.prato-img {
+.prato p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  width: 100%;
+  background-color: #c5c5c59f;
+  font-weight: 500;
+}
+
+/* .prato-img {
   width: 100%;
   height: 200px;
   background-color: #ccc;
   margin-bottom: 10px;
-}
+} */
 
 .botoes {
   margin-top: 20px;

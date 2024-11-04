@@ -7,69 +7,82 @@
     <link rel="stylesheet" href="..\src\css\home.css" />
     <link rel="stylesheet" href="..\src\css\input.css" />
     <link rel="stylesheet" href="..\src\css\output.css" />
+
+    <script type="module" src="./js/header.js"></script>
+    <script type="module" defer src="./js/whats.js"></script>
   </head>
   <body>
     <!-- Navbar -->
-    <div id="header-placeholder"></div>
+    <div id="header-placeholder" class="h-fit"></div>
     <!-- Local onde o header será inserido -->
 
-    <!-- Hero Section -->
-    <section class="whatsapp-popup" onclick="openWhatsApp()">
-      <img src="./assets/whatsapp_icon.svg" alt="WhatsApp" />
-    </section>
+    <main class="">
+      <!-- Hero Section -->
+      <section class="whatsapp-popup" onclick="openWhatsApp()">
+        <img src="./assets/whatsapp_icon.svg" alt="WhatsApp" />
+      </section>
 
-    <!-- Pratos Section -->
-    <section class="pratos">
-      <h2>Descubra nossos pratos</h2>
-      <p>Pratos especiais toda semana!</p>
-      <div class="carousel">
-        <div class="arrow-left">◀</div>
-        <div class="pratos-container">
-          <div class="prato">
-            <div class="prato-img">Img</div>
-            <p>Prato 1</p>
-          </div>
-          <div class="prato">
-            <div class="prato-img">Img</div>
-            <p>Prato 2</p>
-          </div>
-          <div class="prato">
-            <div class="prato-img">img</div>
-            <p>Prato 3</p>
-          </div>
-        </div>
-        <div class="arrow-right">▶</div>
-      </div>
-      <a class="botoes" href="cardapio.html">Ver Cardapio</a>
-    </section>
+      <!-- Pratos Section -->
 
-    <!-- História Section -->
-    <section class="historia">
-      <h2>Descubra a nossa história</h2>
-      <div class="historia-content">
-        <div class="texto-historia">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
-            quasi expedita dicta perferendis veniam nisi natus impedit vero
-            exercitationem, aspernatur, earum nulla obcaecati quae, possimus
-            voluptas autem tenetur adipisci ex.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque
-            fugit consectetur quam a exercitationem unde quos distinctio
-            praesentium, quas sed nihil doloremque aspernatur ducimus corporis
-            maxime itaque! Nostrum, accusamus.
-          </p>
-          <a class="botoes" href="historia.html">Ver história</a>
+      <section
+        class="flex flex-col flex-0 text-center items-center bg-light-400 pt-20 pb-10 gap-6"
+      >
+        <div class="flex flex-col gap-0.5">
+          <h2 class="text-3xl font-medium">Descubra nossos pratos</h2>
+          <p class="font-light">Pratos especiais toda semana!</p>
         </div>
-        <div class="imagem-historia">IMG</div>
-      </div>
-    </section>
+
+        <!-- @TODO: Adicionar lógica do carrosel aqui -->
+        <div class="carousel">
+          <!-- <div class="arrow-left">◀</div> -->
+          <div class="pratos-container">
+            <div class="prato" id="prato-1">
+              <p>Prato 1</p>
+            </div>
+            <div class="prato" id="prato-2">
+              <p>Prato 2</p>
+            </div>
+            <div class="prato" id="prato-3">
+              <p>Prato 3</p>
+            </div>
+          </div>
+          <!-- <div class="arrow-right">▶</div> -->
+        </div>
+        <a class="btn-primary" href="cardapio.html">Ver Cardapio</a>
+      </section>
+
+      <!-- História Section -->
+      <section class="py-16 px-48 gap-10 bg-white flex">
+        <article class="flex flex-col gap-8 w-2/4">
+          <h2 class="text-3xl font-medium text-center">
+            Descubra a nossa história
+          </h2>
+          <div class="text-justify">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
+              quasi expedita dicta perferendis veniam nisi natus impedit vero
+              exercitationem, aspernatur, earum nulla obcaecati quae, possimus
+              voluptas autem tenetur adipisci ex.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              cumque fugit consectetur quam a exercitationem unde quos
+              distinctio praesentium, quas sed nihil doloremque aspernatur
+              ducimus corporis maxime itaque! Nostrum, accusamus.
+            </p>
+          </div>
+          <a class="btn-primary self-center" href="historia.html"
+            >Ver história</a
+          >
+        </article>
+        <article class="w-2/4">
+          <img src="./assets/placeholder.png" class="w-4/5 mx-auto" />
+        </article>
+      </section>
+    </main>
 
     <footer>
       <p>© 2024 Bravo Bravíssimo. Todos os direitos reservados.</p>
     </footer>
-    <script type="module" src="./js/whats.js"></script>
-    <script type="module" src="./js/header.js"></script>
   </body>
 </html>
