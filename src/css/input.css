@@ -2,6 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Roboto";
+    font-style: thin;
+    font-weight: 100;
+    font-display: swap;
+    src: url("../assets/font/Roboto-Thin.ttf");
+  }
+  @font-face {
+    font-family: "Roboto";
+    font-style: light;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../assets/font/Roboto-Light.ttf");
+  }
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../assets/font/Roboto-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Roboto";
+    font-style: medium;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../assets/font/Roboto-Medium.ttf");
+  }
+  @font-face {
+    font-family: "Roboto";
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../assets/font/Roboto-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Roboto";
+    font-style: black;
+    font-weight: 900;
+    font-display: swap;
+    src: url("../assets/font/Roboto-Black.ttf");
+  }
+
+  html {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+  }
+}
+
 @layer components {
   .btn-primary {
     @apply transition px-4 py-2 bg-sky-600 text-neutral-100 border-none cursor-pointer rounded-lg w-fit hover:bg-sky-400 active:bg-sky-900;
