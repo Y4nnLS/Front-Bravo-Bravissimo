@@ -6,6 +6,9 @@ module.exports = {
       roboto: ["Roboto", 'sans-serif']
     },
     extend: {
+      backgroundImage: {
+        'main': "url('../assets/bg.jpg')"
+      },
       colors: {
         light: {
           300: '#f4f4f488',
