@@ -11,4 +11,6 @@ async function loadHeader() {
 }
 
 // Chama a função ao carregar a página
-window.onload = loadHeader;
+document.addEventListener("DOMContentLoaded", function () {
+    loadHeader()
+});
