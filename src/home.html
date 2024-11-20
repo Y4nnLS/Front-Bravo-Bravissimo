@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="..\src\css\output.css" />
 
     <script type="module" src="./js/header.js"></script>
+    <script type="module" src="./js/footer.js"></script>
     <script type="module" defer src="./js/whats.js"></script>
   </head>
   <body>
@@ -34,7 +35,7 @@
       <!-- Pratos Section -->
 
       <section
-        class="flex flex-col flex-0 text-center items-center bg-sky-800 text-white py-16 gap-8"
+        class="flex flex-col flex-0 text-center items-center bg-sky-900 text-white py-16 gap-8"
       >
         <div class="flex flex-col gap-0.5">
           <h2 class="text-3xl font-medium">Descubra nossos pratos</h2>
@@ -45,14 +46,47 @@
         <div class="carousel">
           <!-- <div class="arrow-left">◀</div> -->
           <div class="pratos-container">
-            <div class="prato" id="prato-1">
-              <p>Prato 1</p>
+            <div
+              class="w-80 h-72 relative rounded-sm drop-shadow-md"
+              id="prato-1"
+            >
+              <img
+                src="./assets/images/food1.jpg"
+                class="w-full h-full absolute object-cover rounded-sm"
+              />
+              <p
+                class="absolute left-0 bottom-0 w-full py-2 bg-dark-300 text-center"
+              >
+                Prato 1
+              </p>
             </div>
-            <div class="prato" id="prato-2">
-              <p>Prato 2</p>
+            <div
+              class="w-80 h-72 relative rounded-sm drop-shadow-md"
+              id="prato-2"
+            >
+              <img
+                src="./assets/images/food2.jpg"
+                class="w-full h-full absolute object-cover rounded-sm"
+              />
+              <p
+                class="absolute left-0 bottom-0 w-full py-2 bg-dark-300 text-center"
+              >
+                Prato 2
+              </p>
             </div>
-            <div class="prato" id="prato-3">
-              <p>Prato 3</p>
+            <div
+              class="w-80 h-72 relative rounded-sm drop-shadow-md"
+              id="prato-3"
+            >
+              <img
+                src="./assets/images/food3.jpg"
+                class="w-full h-full absolute object-cover rounded-sm"
+              />
+              <p
+                class="absolute left-0 bottom-0 w-full py-2 bg-dark-300 text-center"
+              >
+                Prato 3
+              </p>
             </div>
           </div>
           <!-- <div class="arrow-right">▶</div> -->
@@ -61,7 +95,7 @@
       </section>
 
       <!-- História Section -->
-      <section class="py-16 px-48 gap-10 bg-white flex">
+      <section class="py-16 px-48 gap-16 bg-white flex">
         <article class="flex flex-col gap-12 w-2/4">
           <h2 class="text-3xl font-medium text-center">
             Descubra a nossa história
@@ -85,13 +119,14 @@
           >
         </article>
         <article class="w-2/4">
-          <img src="./assets/placeholder.png" class="w-4/5 mx-auto" />
+          <img
+            src="./assets/images/place1.jpg"
+            class="w-full rounded drop-shadow-md"
+          />
         </article>
       </section>
     </main>
 
-    <footer class="bg-slate-800 text-white p-5">
-      <p>© 2024 Bravo Bravíssimo. Todos os direitos reservados.</p>
-    </footer>
+    <div id="footer-placeholder" class="h-fit" />
   </body>
 </html>

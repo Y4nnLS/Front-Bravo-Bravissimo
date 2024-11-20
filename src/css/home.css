@@ -98,7 +98,7 @@ nav ul li a {
   overflow: hidden;
   max-width: 920px;
 }
-
+/* 
 .prato {
   min-width: 250px;
   min-height: 250px;
@@ -107,7 +107,7 @@ nav ul li a {
   position: relative;
   background-image: url("../assets/placeholder.png");
   background-size: cover;
-}
+} */
 
 .prato p {
   position: absolute;
