@@ -2,7 +2,7 @@ import * as dataBackService from "./dataBackService.js";
 
 // Chama as funções quando a página carregar
 document.addEventListener("DOMContentLoaded", () => {
-    getPratos(); // Chama a função que busca todos os pratos
+    // getPratos(); // Chama a função que busca todos os pratos
     getPratosSemanais(); // Chama a função que busca apenas os pratos semanais
     getPratosPorCategoria();
 });

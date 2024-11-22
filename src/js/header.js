@@ -2,7 +2,7 @@
 async function loadHeader() {
     const headerPlaceholder = document.getElementById('header-placeholder');
     try {
-        const response = await fetch('header.html'); // Busca o conteúdo do header.html
+        const response = await fetch('components/header.html'); // Busca o conteúdo do header.html
         const headerHTML = await response.text(); // Converte o conteúdo em texto
         headerPlaceholder.innerHTML = headerHTML; // Insere o header no local correto
     } catch (error) {
@@ -11,6 +11,6 @@ async function loadHeader() {
 }
 
 // Chama a função ao carregar a página
-document.addEventListener("DOMContentLoaded", function () {
-    loadHeader()
+document.addEventListener("DOMContentLoaded", () => {
+    loadHeader();
 });
