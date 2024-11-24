@@ -864,6 +864,10 @@ html {
   height: 8rem;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -923,6 +927,10 @@ html {
 
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .flex-none {
@@ -1030,6 +1038,11 @@ html {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .border {

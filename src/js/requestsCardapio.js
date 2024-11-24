@@ -77,11 +77,12 @@ async function getPratosSemanais() {
             let html = "";
             pratos.forEach((prato) => {
                 let foto = prato.foto
-                    ? `<img class="fixed-size-image object-cover mx-auto" src="data:image/png;base64,${prato.foto}" alt="Imagem do Prato"/>`
+                    ? `<img class="fixed-size-image object-cover mx-auto rounded-t-lg" src="data:image/png;base64,${prato.foto}" alt="Imagem do Prato"/>`
                     : `<div style="width:160px;height:160x">Sem imagem</div>`;
-                html += `<div class="max-w-md2 mx-auto bg-white p-8 shadow-md rounded-lg">
+
+                html += `<div class="max-w-md mx-auto bg-white shadow-md rounded-lg">
                             ${foto}        
-                                <div class="p-4">
+                                <div class="p-4 text-center">
                                     <h2 class="text-lg font-semibold text-gray-800">${prato.nome}</h2>
                                     <p class="text-sm text-gray-600 mt-2">${prato.descricao}}</p>
                                     <p class="mt-4 text-blue-500 font-bold">R$ ${prato.preco}</p>
@@ -89,11 +90,11 @@ async function getPratosSemanais() {
                             </div>`;
             });
             // <th>Ações</th>
-/* <td>
-                                <button class="action-btn edit-btn" data-id="${prato.id}"><i class="pi pi-pencil"></i></button>
-                                <button class="action-btn delete-btn" data-id="${prato.id}"><i class="pi pi-trash"></i></button>
-                            </td> */
-            html += "</table>";
+            /* <td>
+                                            <button class="action-btn edit-btn" data-id="${prato.id}"><i class="pi pi-pencil"></i></button>
+                                            <button class="action-btn delete-btn" data-id="${prato.id}"><i class="pi pi-trash"></i></button>
+                                        </td> */
+            // html += "</table>";
             resultadoDiv.innerHTML = html;
 
             // Adicionar eventos aos botões de editar e excluir
@@ -141,9 +142,10 @@ async function getPratosPorCategoria() {
                 // Adiciona cada prato da categoria
                 pratosCategoria.forEach((prato) => {
                     const foto = prato.foto
-                        ? `<img class="fixed-size-image object-cover mx-auto" src="data:image/png;base64,${prato.foto}" alt="Imagem do Prato"/>`
+                        ? `<img class="fixed-size-image object-cover mx-auto rounded-t-lg" src="data:image/png;base64,${prato.foto}" alt="Imagem do Prato"/>`
                         : `<div style="width:160px;height:160px">Sem imagem</div>`;
-                    html += `<div class="card">
+
+                    html += `<div class="card rounded-lg">
                                 ${foto}
                                 <div class="p-4">
                                     <h2 class="text-lg font-semibold text-gray-800">${prato.nome}</h2>

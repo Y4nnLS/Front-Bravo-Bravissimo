@@ -17,9 +17,9 @@
       .card {
         background-color: white;
         margin: 10px;
-        padding: 15px;
+        /* padding: 15px; */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+        /* border-radius: 8px; */
         text-align: center;
       }
 
@@ -44,7 +44,7 @@
       @media (min-width: 1024px) {
         .grid-container {
           grid-template-columns: repeat(
-            5,
+            4,
             1fr
           ); /* 4 colunas para telas maiores */
         }
@@ -53,7 +53,7 @@
       .card img {
         max-width: 100%;
         height: auto;
-        border-radius: 8px;
+        /* border-radius: 8px; */
       }
 
       .card h2 {
@@ -85,12 +85,9 @@
     <div id="header-placeholder"></div>
     <!-- Local onde o header será inserido -->
 
-    <main class="p-8 pt-20 pb-10">
+    <main class="max-w-7xl min-h-screen w-full mx-auto pt-20 pb-10">
       <section class="whatsapp-popup" onclick="openWhatsApp()">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
-          alt="WhatsApp"
-        />
+        <img src="./assets/whatsapp_icon.svg" alt="WhatsApp" />
       </section>
       <h1 class="section-title">Cardápio</h1>
       <!-- Pratos da Semana -->
