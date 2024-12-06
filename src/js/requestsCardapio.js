@@ -28,7 +28,7 @@ async function getPratos() {
                             ${foto}        
                                 <div class="p-4">
                                     <h2 class="text-lg font-semibold text-gray-800">${prato.nome}</h2>
-                                    <p class="text-sm text-gray-600 mt-2">${prato.descricao}}</p>
+                                    <p class="text-sm text-gray-600 mt-2">${prato.ingredientes}}</p>
                                     <p class="mt-4 text-blue-500 font-bold">R$ ${prato.preco}</p>
                                 </div>
                             </div>`;
@@ -84,7 +84,7 @@ async function getPratosSemanais() {
                             ${foto}        
                                 <div class="p-4 text-center">
                                     <h2 class="text-lg font-semibold text-gray-800">${prato.nome}</h2>
-                                    <p class="text-sm text-gray-600 mt-2">${prato.descricao}}</p>
+                                    <p class="text-sm text-gray-600 mt-2">${prato.ingredientes}}</p>
                                     <p class="mt-4 text-blue-500 font-bold">R$ ${prato.preco}</p>
                                 </div>
                             </div>`;
@@ -149,7 +149,7 @@ async function getPratosPorCategoria() {
                                 ${foto}
                                 <div class="p-4">
                                     <h2 class="text-lg font-semibold text-gray-800">${prato.nome}</h2>
-                                    <p class="text-sm text-gray-600 mt-2">${prato.descricao}</p>
+                                    <p class="text-sm text-gray-600 mt-2">${prato.ingredientes}</p>
                                     <p class="mt-4 text-blue-500 font-bold">R$ ${prato.preco}</p>
                                 </div>
                              </div>`;
