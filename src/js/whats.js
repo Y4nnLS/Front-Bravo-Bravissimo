@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function openWhatsApp() {
 // Número de telefone no formato internacional sem o símbolo de +
-const phoneNumber = "554197892272";  // Substitua pelo seu número do WhatsApp
-const message = "mensagem de teste";  // Mensagem personalizada
+const phoneNumber = "5541997918329";  // Substitua pelo seu número do WhatsApp
+const message = "Olá, tudo bem? gostaria de ver o cardápio";  // Mensagem personalizada
 
 // URL de redirecionamento para o WhatsApp com a mensagem
 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
